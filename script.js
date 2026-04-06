@@ -68,3 +68,18 @@ function renderCards(projectList) {
 
 // Initial render
 renderCards(projects);
+
+
+const searchInput = document.getElementById("search");
+
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+
+    const filteredProjects = projects.filter(project => 
+        project.title.toLowerCase().includes(query) ||
+        project.description.toLowerCase().includes(query) ||
+        project.category.toLowerCase().includes(query)
+    );
+
+    renderCards(filteredProjects);
+});
