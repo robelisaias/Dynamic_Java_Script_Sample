@@ -1,4 +1,4 @@
-// script.js
+
 
 const projects = [
     {
@@ -49,7 +49,7 @@ const projects = [
 const container = document.getElementById("card-container");
 
 function renderCards(projectList) {
-    container.innerHTML = ""; // Clear previous cards
+    container.innerHTML = ""; 
 
     projectList.forEach(project => {
         const card = document.createElement("article");
@@ -66,7 +66,7 @@ function renderCards(projectList) {
     });
 }
 
-// Initial render
+
 renderCards(projects);
 
 
