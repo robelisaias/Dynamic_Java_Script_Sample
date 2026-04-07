@@ -30,7 +30,7 @@ function renderCards(projectList) {
 
 async function loadProjects() {
     try {
-        const response = await fetch("projects.json");
+        const response = await fetch("https://raw.githubusercontent.com/robelisaias/Dynamic_Java_Script_Sample/refs/heads/feature/fetch-json/Data/projects.json");
         if(!response.ok){
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
